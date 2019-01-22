@@ -1,7 +1,7 @@
 # Личный проект «Нёрдс»
 
 * Студент: [Daria Chesnokova](https://up.htmlacademy.ru/htmlcss/24/user/950079).
-* Наставник: `Неизвестно`.
+* Наставник: [Ирина Малиновская] (https://htmlacademy.ru/profile/irina-malinovskaya)
 
 ---
 
