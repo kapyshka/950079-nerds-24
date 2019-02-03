@@ -19,7 +19,9 @@
           </ul>
           <ul class="user-navigation">
             <li>
-              <a href="basket.html"><img src="img/cart-icon.svg" alt= "Корзина"> Корзина</a>
+              <a class="basket" href="basket.html">
+                <img src="img/cart-icon.svg" alt= "Корзина"> Корзина
+              </a>
             </li>
           </ul>
         </nav>
@@ -60,6 +62,25 @@
     </main>
     <footer class="main-footer">
       <div class="container">
+        <section class="contact-us">
+          <h2>Напишите нам</h2>
+          <form class="contact-us-form" action="http://echo.htmlacademy.ru" method="post">
+            <p class="contact-us-item">
+             <label for="contact-us-name">Ваше имя:</label>
+             <input type="text" name="name" value="" placeholder="Имя Фамилия" id="contact-us-name">
+            </p>
+            <p class="contact-us-item">
+              <label for="contact-us-mail">Ваш  e-mail:</label>
+              <input type="text" name="name" value="" placeholder="email@example.com" id="contact-us-mail">
+            </p>
+            <p class="contact-us-item">
+              <label for="contact-us-text">Текст письма:</label>
+              <input type="text" name="name" value="" placeholder="В свободной форме" id="contact-us-text">
+            </p>
+            <button class="button" type="submit">Отправить</button>
+            <button class="contact-us-close" type="button">Закрыть</button>
+          </form>
+        </section>
         <ul>
           <li>
             <a class="social-button" href="#">
