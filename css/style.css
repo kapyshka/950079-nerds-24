@@ -1,0 +1,258 @@
+body {
+  margin: 0;
+  padding: 0;
+
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 30px;
+  font-weight: 700;
+  color: #000000;
+  text-transform: uppercase;
+
+  background-color: #ffffff;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+
+.filter-button-button {
+  color: #000000;
+  background-color: #eeeeee;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.filter-button-button:hover{
+  color: #000000;
+  background-color: #dfdfdf
+}
+.filter-button-button:focus {
+  color: #999999;
+  background-color: #d5d5d5
+}
+.button-red {
+  font: inherit;
+
+  text-align: left;
+  color: #ffffff;
+  vertical-align: middle;
+  text-transform: uppercase;
+
+  background-color: #fb565a;
+  border: none;
+}
+
+.button-red:hover {
+  background-color: #e74246
+}
+.button-red:focus {
+  background-color: #d7373b;
+  color: rgba(0, 0, 0, 0.302);
+}
+.button-green {
+  font: inherit;
+
+  text-align: left;
+  color: #ffffff;
+  vertical-align: middle;
+  text-transform: uppercase;
+
+  background-color: #00ca74;
+  border: none;
+}
+
+.button-green:hover {
+  background-color: #00bc6c;
+}
+.button-green:focus {
+  background-color: #00aa62;
+  color: rgba(0, 0, 0, 0.302);
+}
+
+.button-yellow {
+  font: inherit;
+
+  text-align: left;
+  color: #ffffff;
+  vertical-align: middle;
+  text-transform: uppercase;
+
+  background-color: #efc84a;;
+  border: none;
+}
+
+.button-yellow:hover {
+  background-color: #eab534;
+}
+.button-yellow:focus {
+  background-color: #e5a722;
+  color: rgba(0, 0, 0, 0.302);
+}
+.main-header {
+  color: #000000;
+  background-color: #eeeeee;
+}
+
+.main-header-logo,
+.main-navigation
+ {
+  font-size: 16px;
+  line-height: 30px;
+}
+
+.site-navigation,
+.user-navigation {
+  list-style: none;
+}
+
+.site-navigation a,
+.user-navigation a {
+  color: #000000;
+}
+
+.site-navigation a:hover,
+.user-navigation a:hover {
+  color: #fb565a;
+  background-color:#eeeeee;
+}
+
+.site-navigation a:focus,
+.user-navigation a:focus {
+  color: rgba(0, 0, 0, 0.302);
+  background-color:#eeeeee;
+}
+.services-list {
+  list-style: none;
+}
+
+.services-item {
+  text-align: left;
+}
+
+.services-item h3 {
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.services-item p {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: normal;
+}
+
+.main-footer {
+  color: #000000;
+  background-color: #ffffff;
+  background-position: 0 0;
+  background-repeat: repeat;
+}
+.contact-us-form {
+  display: none;
+}
+.social-button {
+  text-align: left;
+}
+
+.social-button {
+  color: #ffffff;
+  background-color: #eeeeee;
+  border-radius: 40px/40px;
+}
+
+.footer-discount {
+  text-align: center;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.footer-discount b {
+  text-align: center;
+  font-size: 36px;
+  line-height: 36px;
+}
+
+.page-title {
+  color: #000000;
+  background-color: #eeeeee;
+  text-align: center;
+  font-size: 55px;
+  line-height: 55px;
+}
+
+.filter fieldset {
+  border: none;
+}
+
+.filter legend {
+  font-size: 18px;
+  line-height: 30px;
+}
+.filter ul {
+  list-style: none;
+  line-height: 40px;
+}
+
+.catalog-list {
+  list-style: none;
+}
+
+.catalog-item {
+  background-color: #ffffff;
+}
+
+.catalog-item-info:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  background-color: #eeeeee;
+}
+
+.button {
+  color: #ffffff;
+  background-color: #fb565a;
+  text-align: center;
+}
+
+.button:hover {
+  color: #ffffff;
+  background-color: #fb565a;
+}
+
+.button:focus {
+  color: #ffffff;
+  background-color: #e74246;
+}
+
+.button:active {
+  color:#ffffff;
+  background-color: #d7373b;
+}
+.pagination-list {
+  list-style: none;
+}
+
+.pagination-item a {
+  color: #000000;
+  background-color: #eeeeee;
+}
+
+.pagination-item a:hover {
+  color: #000000;
+  background-color: #dfdfdf;
+}
+.pagination-item a:focus {
+  color: rgba(0, 0, 0, 0.302);
+  background-color: #d5d5d5;
+}
+.pagination-item-current a {
+  color: #000000;
+  background-color: #ffffff;
+  border: 2px solid #eeeeee;
+}
+
+.pagination-item-current a:active {
+  color: #000000;
+  background-color: #ffffff;
+  border: 4px inset #eeeeee;
+}

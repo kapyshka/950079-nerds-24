@@ -3,8 +3,11 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Нёрдс</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&amp;subset=cyrillic" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
-  <body>
+  <body class="inner-page">
     <header class="main-header">
       <div class="container">
         <a class="main-header-logo">
@@ -78,7 +81,7 @@
                           </li>
                       </ul>
                </fieldset>
-               <button type="submit" class="filter-button button">
+               <button type="submit" class="filter-button-button">
                  Показать
                </button>
             </form>
@@ -91,7 +94,7 @@
                     <img src="img/img-sedona.jpg" alt="Шаблон Седона">
                   </figure>
                   <div class="catalog-item-info">
-                    <h3>Sedona</h3>
+                    <h3>SEDONA</h3>
                     <p> Информационный сайт для туристов</p>
                     <a class="button" href="#">9 900 РУБ.</a>
                   </div>
@@ -101,7 +104,8 @@
                      <img src="img/img-pink.jpg" alt="Шаблон Pink">
                   </figure>
                   <div class="catalog-item-info">
-                    <h3>Pink</h3>
+                    <h3>PINK APP</h3>
+                    <p>Продуктовый лендинг приложения для iOS и Android</p>
                     <a class="button" href="#">9 900 РУБ.</a>
                   </div>
                 </li>
@@ -110,7 +114,10 @@
                     <img src="img/img-barbershop.jpg" alt="Шаблон барбершоп Бородинский">
                   </figure>
                   <div class="catalog-item-info">
-                    <h3>Барбершоп Бородинский</h3>
+                    <h3>BARBERSHOP</h3>
+                    <p>Сайт салона красоты
+                      Для мужчин,да.
+                    </p>
                     <a class="button" href="#">9 900 РУБ.</a>
                   </div>
                 </li>
@@ -119,7 +126,8 @@
                     <img src="img/img-mishka.jpg" alt="Шаблон магазина Mishka">
                   </figure>
                   <div class="catalog-item-info">
-                    <h3>Mishka</h3>
+                    <h3>MISHKA</h3>
+                    <p>Интернет-магазин вязаных игрушек</p>
                     <a class="button" href="#">9 900 РУБ.</a>
                   </div>
                 </li>
@@ -128,7 +136,8 @@
                       <img src="img/img-aplus.jpg" alt="Шаблон Школы">
                    </figure>
                    <div class="catalog-item-info">
-                     <h3>Школа</h3>
+                     <h3>A PLUS</h3>
+                     <p>Лендинг курсов повышения квалификации</p>
                      <a class="button" href="#">9 900 РУБ.</a>
                    </div>
                 </li>
@@ -137,13 +146,14 @@
                      <img src="img/img-kvast.jpg" alt="Шаблон Кваст">
                    </figure>
                    <div class="catalog-item-info">
-                     <h3>Кваст</h3>
+                     <h3>КВАСТ</h3>
+                     <p>Промо-сайт производителей крафтового кваса</p>
                      <a class="button" href="#">9 900 РУБ.</a>
                    </div>
                   </li>
               </ul>
               <ul class="pagination-list">
-                 <li class="pagination-item pagination-item-current">1</a></li>
+                 <li class="pagination-item pagination-item-current"><a>1</a></li>
                  <li class="pagination-item"><a href="#">2</a></li>
                  <li class="pagination-item"><a href="#">3</a></li>
                  <li class="pagination-item"><a href="#">Следующая</a></li>
@@ -153,48 +163,52 @@
        </section>
     </main>
     <footer class="main-footer">
-      <div class="container">
-        <section class="contact-us">
-          <h2>Напишите нам</h2>
-          <form class="contact-us-form" action="http://echo.htmlacademy.ru" method="post">
-            <p class="contact-us-item">
-             <label for="contact-us-name">Ваше имя:</label>
-             <input type="text" name="name" value="" placeholder="Имя Фамилия" id="contact-us-name">
-            </p>
-            <p class="contact-us-item">
-              <label for="contact-us-mail">Ваш  e-mail:</label>
-              <input type="text" name="name" value="" placeholder="email@example.com" id="contact-us-mail">
-            </p>
-            <p class="contact-us-item">
-              <label for="contact-us-text">Текст письма:</label>
-              <input type="text" name="name" value="" placeholder="В свободной форме" id="contact-us-text">
-            </p>
-            <button class="button" type="submit">Отправить</button>
-            <button class="contact-us-close" type="button">Закрыть</button>
-          </form>
-        </section>
-        <ul>
-          <li>
-            <a class="social-button" href="#">
-              <img src="img/vk-icon.svg" atl="Вконтакте">Вконтакте
-            </a>
-          </li>
-          <li>
-            <a class="social-button" href="#">
-              <img src="img/fb-icon.svg" atl="Фэйсбук">Фэйсбук
-            </a>
-          </li>
-          <li>
-            <a class="social-button" href="#">
-              <img src="img/insta-icon.svg" atl="Инстаграм">Инстаграм
-            </a>
-          </li>
-        </ul>
-        <p class="footer-discount">
-          <b>Давайте дружить, это выгодно!</b>
+        <div class="container">
+            <h2>Напишите нам</h2>
+            <form class="contact-us-form" action="http://echo.htmlacademy.ru" method="post">
+              <div class="contact-us-info">
+                <p class="contact-us-item">
+                <label for="contact-us-name">Ваше имя:</label>
+                <input type="text" name="name" value="" placeholder="Имя Фамилия" id="contact-us-name">
+                </p>
+                <p class="contact-us-item">
+                  <label for="contact-us-mail">Ваш  e-mail:</label>
+                  <input type="text" name="name" value="" placeholder="email@example.com" id="contact-us-mail">
+                </p>
+              </div>
+              <div class="contact-us-text">
+                <p class="contact-us-item">
+                  <label for="contact-us-text">Текст письма:</label>
+                  <input type="text" name="name" value="" placeholder="В свободной форме" id="contact-us-text">
+                </p>
+              </div>
+              <div class="contact-us-button">
+                <button class="button" type="submit">Отправить</button>
+                <button class="contact-us-close" type="button">Закрыть</button>
+              </div>
+            </form>
+          <ul>
+            <li>
+              <a class="social-button" href="#">
+                <img src="img/vk-icon.svg" atl="Вконтакте">Вконтакте
+              </a>
+            </li>
+            <li>
+              <a class="social-button" href="#">
+                <img src="img/fb-icon.svg" atl="Фэйсбук">Фэйсбук
+              </a>
+            </li>
+            <li>
+              <a class="social-button" href="#">
+                <img src="img/insta-icon.svg" atl="Инстаграм">Инстаграм
+              </a>
+            </li>
+          </ul>
+          <p class="footer-discount">
+            <b>Давайте дружить, это выгодно!</b><br>
              Скидка 10% для друзей из социальных сетей.
-        </p>
-      </div>
+          </p>
+        </div>
     </footer>
   </body>
 </html>
