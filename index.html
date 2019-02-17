@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>HTML Academy: Нёрдс</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&amp;subset=cyrillic" rel="stylesheet">
-    <link href="css/normalize.css" rel="stylesheet">
+    <link href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
@@ -66,28 +66,30 @@
     <footer class="main-footer">
       <div class="container">
           <h2>Напишите нам</h2>
-          <form class="contact-us-form" action="http://echo.htmlacademy.ru" method="post">
-            <div class="contact-us-info">
-              <p class="contact-us-item">
-              <label for="contact-us-name">Ваше имя:</label>
-              <input type="text" name="name" value="" placeholder="Имя Фамилия" id="contact-us-name">
-              </p>
-              <p class="contact-us-item">
-                <label for="contact-us-mail">Ваш  e-mail:</label>
-                <input type="text" name="name" value="" placeholder="email@example.com" id="contact-us-mail">
-              </p>
-            </div>
-            <div class="contact-us-text">
-              <p class="contact-us-item">
-                <label for="contact-us-text">Текст письма:</label>
-                <input type="text" name="name" value="" placeholder="В свободной форме" id="contact-us-text">
-              </p>
-            </div>
-            <div class="contact-us-button">
-              <button class="button" type="submit">Отправить</button>
-              <button class="contact-us-close" type="button">Закрыть</button>
-            </div>
-          </form>
+          <section class="contact-us">
+            <form class="contact-us-form" action="http://echo.htmlacademy.ru" method="post">
+              <div class="contact-us-info">
+                <p class="contact-us-item">
+                <label for="contact-us-name">Ваше имя:</label>
+                <input type="text" name="name" value="" placeholder="Имя Фамилия" id="contact-us-name">
+                </p>
+                <p class="contact-us-item">
+                  <label for="contact-us-mail">Ваш  e-mail:</label>
+                  <input type="text" name="name" value="" placeholder="email@example.com" id="contact-us-mail">
+                </p>
+              </div>
+              <div class="contact-us-text">
+                <p class="contact-us-item">
+                  <label for="contact-us-text">Текст письма:</label>
+                  <input type="text" name="name" value="" placeholder="В свободной форме" id="contact-us-text">
+                </p>
+              </div>
+              <div class="contact-us-button">
+                <button class="button" type="submit">Отправить</button>
+                <button class="contact-us-close" type="button">Закрыть</button>
+              </div>
+            </form>
+          </section>
         <ul>
           <li>
             <a class="social-button" href="#">
