@@ -4,30 +4,34 @@
     <meta charset="utf-8">
     <title>HTML Academy: Нёрдс</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&amp;subset=cyrillic" rel="stylesheet">
-    <link href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body class="inner-page">
-    <header class="main-header">
-      <div class="container">
-        <a class="main-header-logo">
-          <img src="img/nerds-logo.svg"alt="Логотип студии Нëрдс">
-        </a>
-        <nav class="main-navigation">
-          <ul class="site-navigation">
-            <li><a href="info.html">Информация</a></li>
-            <li><a href="clients.html">Клиенты</a></li>
-            <li><a>Магазин</a></li>
-            <li><a href="contacts.html">Контакты</a></li>
-          </ul>
-          <ul class="user-navigation">
-            <li>
-              <a href="basket.html"><img src="img/cart-icon.svg" alt= "Корзина"> Корзина</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </header>
+      <header class="main-header">
+          <div class="header-container">
+            <a class="main-header-logo">
+              <img src="img/nerds-logo.svg"alt="Логотип студии Нëрдс">
+            </a>
+            <nav class="main-navigation">
+              <div class="main-navigation-container">
+                <ul class="site-navigation">
+                  <li><a href="info.html">Информация</a></li>
+                  <li><a href="clients.html">Клиенты</a></li>
+                  <li><a href="shop.html">Магазин</a></li>
+                  <li><a href="contacts.html">Контакты</a></li>
+                </ul>
+                <ul class="user-navigation">
+                  <li>
+                    <a class="basket" href="basket.html">
+                      <img src="img/cart-icon.svg" alt= "Корзина"> Корзина
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+          <div>
+      </header>
     <main>
        <section>
          <div class="container">
@@ -35,7 +39,7 @@
          </div>
        </section>
        <section class="catalog">
-         <div class="container">
+         <div class="catalog-container">
            <aside class="catalog-filter">
              <h2 class="visually-hidden"> Фильтр готовых шаблонов</h2>
              <form class="filter" method="get" action="https://echo.htmlacademy.ru">
@@ -89,7 +93,7 @@
            <div class="catalog-block">
               <h2 class="visually-hidden"> Выбор готовых шаблонов</h2>
               <ul class="catalog-list">
-                <div class="sedona-card">
+                <div class="info-card">
                   <li class="catalog-item">
                     <figure>
                       <img src="img/img-sedona.jpg" alt="Шаблон Седона">
@@ -101,7 +105,7 @@
                     </div>
                   </li>
                 </div>
-                <div class="pink-card">
+                <div class="info-card">
                   <li class="catalog-item">
                     <figure>
                       <img src="img/img-pink.jpg" alt="Шаблон Pink">
@@ -113,7 +117,7 @@
                     </div>
                   </li>
                 </div>
-                <div class="barbershop-card">
+                <div class="info-card">
                   <li class="catalog-item">
                     <figure>
                       <img src="img/img-barbershop.jpg" alt="Шаблон барбершоп Бородинский">
@@ -127,7 +131,7 @@
                     </div>
                   </li>
                 </div>
-                <div class="mishka-card">
+                <div class="info-card">
                   <li class="catalog-item">
                     <figure>
                       <img src="img/img-mishka.jpg" alt="Шаблон магазина Mishka">
@@ -139,7 +143,7 @@
                     </div>
                   </li>
                 </div>
-                <div class="aplus-card">
+                <div class="info-card">
                   <li class="catalog-item">
                     <figure>
                         <img src="img/img-aplus.jpg" alt="Шаблон Школы">
@@ -151,7 +155,7 @@
                     </div>
                   </li>
                 </div>
-                <div class=Элмфые-card>
+                <div class="info-card">
                  <li class="catalog-item">
                    <figure>
                      <img src="img/img-kvast.jpg" alt="Шаблон Кваст">
@@ -175,54 +179,59 @@
        </section>
     </main>
     <footer class="main-footer">
-      <div class="container">
-          <h2>Напишите нам</h2>
-          <section class="contact-us">
-            <form class="contact-us-form" action="http://echo.htmlacademy.ru" method="post">
-              <div class="contact-us-info">
-                <p class="contact-us-item">
-                <label for="contact-us-name">Ваше имя:</label>
-                <input type="text" name="name" value="" placeholder="Имя Фамилия" id="contact-us-name">
-                </p>
-                <p class="contact-us-item">
-                  <label for="contact-us-mail">Ваш  e-mail:</label>
-                  <input type="text" name="name" value="" placeholder="email@example.com" id="contact-us-mail">
-                </p>
-              </div>
-              <div class="contact-us-text">
-                <p class="contact-us-item">
-                  <label for="contact-us-text">Текст письма:</label>
-                  <input type="text" name="name" value="" placeholder="В свободной форме" id="contact-us-text">
-                </p>
-              </div>
-              <div class="contact-us-button">
-                <button class="button" type="submit">Отправить</button>
-                <button class="contact-us-close" type="button">Закрыть</button>
-              </div>
-            </form>
-          </section>
-        <ul>
-          <li>
-            <a class="social-button" href="#">
-              <img src="img/vk-icon.svg" atl="Вконтакте">Вконтакте
-            </a>
-          </li>
-          <li>
-            <a class="social-button" href="#">
-              <img src="img/fb-icon.svg" atl="Фэйсбук">Фэйсбук
-            </a>
-          </li>
-          <li>
-            <a class="social-button" href="#">
-              <img src="img/insta-icon.svg" atl="Инстаграм">Инстаграм
-            </a>
-          </li>
-        </ul>
-        <p class="footer-discount">
-          <b>Давайте дружить, это выгодно!</b><br>
-           Скидка 10% для друзей из социальных сетей.
-        </p>
-      </div>
+        <div class="footer-container">
+            <section class="contact-us">
+              <h2>Напишите нам</h2>
+                <form class="contact-us-form" action="http://echo.htmlacademy.ru" method="post">
+                  <div class="contact-us-info">
+                    <p class="contact-us-item">
+                    <label for="contact-us-name">Ваше имя:</label>
+                    <input type="text" name="name" value="" placeholder="Имя Фамилия" id="contact-us-name">
+                    </p>
+                    <p class="contact-us-item">
+                      <label for="contact-us-mail">Ваш  e-mail:</label>
+                      <input type="text" name="name" value="" placeholder="email@example.com" id="contact-us-mail">
+                    </p>
+                  </div>
+                  <div class="contact-us-text">
+                    <p class="contact-us-item">
+                      <label for="contact-us-text">Текст письма:</label>
+                      <input type="text" name="name" value="" placeholder="В свободной форме" id="contact-us-text">
+                    </p>
+                  </div>
+                  <div class="contact-us-button">
+                    <button class="button" type="submit">Отправить</button>
+                    <button class="contact-us-close" type="button">Закрыть</button>
+                  </div>
+                </form>
+            </section>
+            <div class="footer-social">
+              <ul>
+                <li>
+                  <a class="social-button" href="#">
+                    <img src="img/vk-icon.svg" atl="Вконтакте">
+                    <span class="visually-hidden">Вконтакте</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="social-button" href="#">
+                    <img src="img/fb-icon.svg" atl="Фэйсбук">
+                    <span class="visually-hidden">Фэйсбук</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="social-button" href="#">
+                    <img src="img/insta-icon.svg" atl="Инстаграм">
+                    <span class="visually-hidden">Инстаграм</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          <p class="footer-discount">
+            <b>Давайте дружить, это выгодно!</b><br>
+             Скидка 10% для друзей из социальных сетей.
+          </p>
+        </div>
     </footer>
   </body>
 </html>

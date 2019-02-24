@@ -8,14 +8,36 @@ body {
   color: #000000;
   text-transform: uppercase;
   background-color: #ffffff;
+  min-width: 1140px;
+  min-height: 2474px;
 }
 
 a {
   text-decoration: none;
 }
 
+.img {
+  max-width: 100%;
+  height: auto;
+}
 
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
 
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
 .filter-button-button {
   color: #000000;
   background-color: #eeeeee;
@@ -86,14 +108,82 @@ a {
 .main-header {
   color: #000000;
   background-color: #eeeeee;
+  margin-bottom: 18px;
 }
-
 .main-header-logo,
 .main-navigation {
   font-size: 16px;
   line-height: 30px;
 }
+.main-navigation-container {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  margin-left: 205px;
 
+  width: 981px;
+  padding: 0 10px;
+  justify-content: space-between;
+}
+
+.header-container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.main-header-logo {
+  width: 160px;
+  height: 65px;
+}
+
+.site-navigation {
+  display: flex;
+  flex-wrap: wrap;
+  width: 550px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+}
+
+.user-navigation {
+  display: flex;
+  width: 160px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  margin-left: auto;
+}
+
+.user-navigation.basket {
+  position: relative;
+  padding-left: 50px;
+}
+
+/* не понимаю почему изорражение не хочет отлипнуть от слова */
+.basket::before {
+  content: "";
+  position: absolute;
+
+  top: 27px;
+  left: 24px;
+
+  width: 15px;
+  height: 15px;
+
+  background-image: url("img/cart-icon.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+
+  opacity: 0.3;
+}
+
+.basket:hover::before,
+.basket:focus::before,
+.lbasket:active::before {
+  opacity: 1;
+}
 .site-navigation,
 .user-navigation {
   list-style: none;
@@ -101,6 +191,9 @@ a {
 
 .site-navigation a,
 .user-navigation a {
+  display: block;
+  padding: 25px 20px;
+  vertical-align: middle;
   color: #000000;
 }
 
@@ -115,17 +208,35 @@ a {
   color: rgba(0, 0, 0, 0.302);
   background-color:#eeeeee;
 }
+/* не могу расположить картинки слева */
 .services-list {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
   list-style: none;
+
 }
 
 .services-item {
+
   text-align: left;
+  width: 300px;
+  height: 400px;
 }
 
 .services-item h3 {
+  position: relative;
   font-size: 24px;
   line-height: 30px;
+
+  margin: 0;
+  margin-bottom: 26px;
+}
+.button-red,
+.button-green,
+.button-yellow {
+padding: 18px 39px 18px 39px;
 }
 
 .services-item p {
@@ -139,24 +250,115 @@ a {
   background-color: #ffffff;
   background-position: 0 0;
   background-repeat: repeat;
+  padding: 0;
+
+  margin-top: 69px;
+
 }
-.contact-us-form {
+
+.footer-container {
+  display: flex;
+
+}
+.contact-us {
   display: none;
+  width: 960px;
+  height: 590px;
+}
+
+.contact-us-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.contact-us: h2 {
+  margin: 0;
+  margin-bottom: 25px;
+}
+
+
+.contact-us-item {
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.contact-us-item label {
+  display: block;
+  margin-bottom: 9px;
+  margin-left: 15px;
+}
+
+.contact-us-item input {
+  box-sizing: border-box;
+  width: 360px;
+  padding-top: 12px;
+  padding-left: 121px;
+  padding-right: 79px;
+  padding-bottom: 15px;
+
+  font: inherit;
+
+  background-color: transparent;
+  border: 2px solid #eeeeee;
+}
+
+.contact-us-button {
+  display: inline-block;
+  margin-right: 16px;
+  padding: 10px 30px;
+
+  font: inherit;
+  text-align: center;
+  color: #d7373b;
+  vertical-align: middle;
+  text-transform: uppercase;
+
+  background-color: #eeeeee;
+  border: none;
 }
 .social-button {
   text-align: left;
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+  margin-right: auto;
+
 }
 
 .social-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: #ffffff;
-  background-color: #eeeeee;
-  border-radius: 40px/40px;
+  background-color: #e1e1e1;
+
+}
+
+.footer-social ul {
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 0;
 }
 
 .footer-discount {
   text-align: center;
   font-size: 16px;
   line-height: 22px;
+  margin: 0;
+  width: 800px;
+  margin-left: 139px;
+}
+
+.social-button:hover,
+.social-button:focus {
+  background-color: #ffffff;
+}
+
+.social-button:hover path,
+.social-button:focus path {
+  fill: #000000;
 }
 
 .footer-discount b {
@@ -171,27 +373,135 @@ a {
   text-align: center;
   font-size: 55px;
   line-height: 55px;
+  padding-bottom: 125px;
+  padding-top: 82px;
+}
+.catalog {
+  width: 1190px;
+}
+.catalog-container {
+  display: flex;
+  justify-content: space-between;
+}
+.catalog-block {
+  width: 760px;
+}
+.catalog-filter {
+  width: 270px;
 }
 
 .filter fieldset {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 30px;
+
   border: none;
 }
 
+.filter fieldset:first-child {
+  margin-bottom: 35px;
+}
+
 .filter legend {
+  margin-bottom: 26px;
   font-size: 18px;
   line-height: 30px;
 }
+
 .filter ul {
+  padding: 0;
+  margin: 0;
+
   list-style: none;
   line-height: 40px;
 }
 
-.catalog-list {
-  list-style: none;
+.filter-option {
+  margin-bottom: 19px;
+  padding-left: 45px;
 }
 
-.catalog-item {
+.filter-option label {
+  position: relative;
+
+  display: block;
+
+  cursor: pointer;
+  user-select: none;
+}
+
+.filter-input-checkbox + label::before {
+  content: "";
+  position: absolute;
+  left: -32px;
+  bottom: 12px;
+
+  width: 16px;
+  height: 16px;
+
+  border: 2px solid #e1e1e1;
+}
+
+.filter-input-checkbox:checked + label::after {
+  content: "";
+
+  position: absolute;
+  left: -32px;
+  bottom: 12px;
+
+  width: 12px;
+  height: 12px;
+;
+}
+
+.filter-input-radio + label::before {
+  content: "";
+
+  position: absolute;
+  left: -32px;
+  bottom: 12px;
+
+  width: 16px;
+  height: 16px;
+
+  border: 2px solid #e1e1e1;
+  border-radius: 50%;
+}
+
+.filter-input-radio:checked + label::after {
+  content: "";
+
+  position: absolute;
+  top: 5px;
+  left: -36px;
+
+  width: 8px;
+  height: 8px;
+
+  background-color: #e1e1e1;
+  border-radius: 50%;
+}
+
+.catalog-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 60px;
+}
+
+/* почему не смещается выплывающая область?? */
+.info-card {
   background-color: #ffffff;
+  width: 360px;
+  margin-bottom: 33px;
+  margin-right: 40px;
+}
+
+.info-card:nth-child(2n) {
+  margin-right: 0;
 }
 
 .catalog-item-info:hover {
@@ -220,10 +530,24 @@ a {
   background-color: #d7373b;
 }
 .pagination-list {
+  display: flex;
+  flex-wrap: wrap;
   list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.pagination-item {
+  margin-right: 5px;
+}
+
+.pagination-item:last-child {
+  margin-right: 0;
 }
 
 .pagination-item a {
+  display: block;
+  padding: 10px 19px;
   color: #000000;
   background-color: #eeeeee;
 }
@@ -247,3 +571,11 @@ a {
   background-color: #ffffff;
   border: 4px inset #eeeeee;
 }
+/* как объединить две части?? */
+.inner-page.main-header {
+  margin: 0;
+  padding: 0;
+}
+
+/* не могу понять почему у меня все "липнет" у краям */
+/* не получается вставить галочку в фильтре */
