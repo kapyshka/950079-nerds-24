@@ -21,6 +21,18 @@ a {
   height: auto;
 }
 
+.figure {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-end: 40px;
+  margin-inline-start: 40px;
+
+}
+.container {
+  width: 1140px;
+  margin: 0 auto;
+}
 .visually-hidden:not(:focus):not(:active),
 input[type="checkbox"].visually-hidden,
 input[type="radio"].visually-hidden {
@@ -43,6 +55,7 @@ input[type="radio"].visually-hidden {
   background-color: #eeeeee;
   font-size: 16px;
   line-height: 18px;
+  padding: 10px 50px 10px 50px;
 }
 
 .filter-button-button:hover {
@@ -108,20 +121,18 @@ input[type="radio"].visually-hidden {
 .main-header {
   color: #000000;
   background-color: #eeeeee;
-  margin-bottom: 18px;
+  padding: 18px;
 }
 .main-header-logo,
 .main-navigation {
   font-size: 16px;
   line-height: 30px;
 }
-.main-navigation-container {
+.main-navigation {
   display: flex;
   flex-direction: row;
-  align-items: baseline;
-  margin-left: 205px;
-
-  width: 981px;
+  align-items: flex-start;
+  width: calc(100%-45px);
   padding: 0 10px;
   justify-content: space-between;
 }
@@ -371,10 +382,15 @@ padding: 18px 39px 18px 39px;
   color: #000000;
   background-color: #eeeeee;
   text-align: center;
-  font-size: 55px;
-  line-height: 55px;
-  padding-bottom: 125px;
-  padding-top: 82px;
+  height: 200px;
+}
+
+.page-title-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+
 }
 .catalog {
   width: 1190px;
@@ -390,6 +406,25 @@ padding: 18px 39px 18px 39px;
   width: 270px;
 }
 
+.catalog-item {
+  position: relative;
+  border-top: 40px solid #f1f1f1;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.catalog-item::before {
+  content: "";
+
+  position: absolute;
+  left: 15px;
+  top: -30px;
+
+  width: 13px;
+  height: 13px;
+
+  background-color: #ffffff;
+  border-radius: 50%;
+}
 .filter fieldset {
   padding: 0;
   margin: 0;
@@ -439,7 +474,7 @@ padding: 18px 39px 18px 39px;
   width: 16px;
   height: 16px;
 
-  border: 2px solid #e1e1e1;
+  border: 2px solid #a6a6a6;
 }
 
 .filter-input-checkbox:checked + label::after {
@@ -464,7 +499,7 @@ padding: 18px 39px 18px 39px;
   width: 16px;
   height: 16px;
 
-  border: 2px solid #e1e1e1;
+  border: 2px solid #a6a6a6;
   border-radius: 50%;
 }
 
@@ -472,13 +507,13 @@ padding: 18px 39px 18px 39px;
   content: "";
 
   position: absolute;
-  top: 5px;
-  left: -36px;
+  top: 13px;
+  left: -25px;
 
   width: 8px;
   height: 8px;
 
-  background-color: #e1e1e1;
+  background-color: #a6a6a6;
   border-radius: 50%;
 }
 
@@ -495,16 +530,31 @@ padding: 18px 39px 18px 39px;
 /* почему не смещается выплывающая область?? */
 .info-card {
   background-color: #ffffff;
+  height: 615px;
   width: 360px;
   margin-bottom: 33px;
   margin-right: 40px;
+  border-radius: 50%;
 }
 
 .info-card:nth-child(2n) {
   margin-right: 0;
 }
 
+.catalog-item-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #eeeeee;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+
+}
+
 .catalog-item-info:hover {
+  display: block;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   background-color: #eeeeee;
 }
@@ -560,11 +610,6 @@ padding: 18px 39px 18px 39px;
   color: rgba(0, 0, 0, 0.302);
   background-color: #d5d5d5;
 }
-.pagination-item-current a {
-  color: #000000;
-  background-color: #ffffff;
-  border: 2px solid #eeeeee;
-}
 
 .pagination-item-current a:active {
   color: #000000;
@@ -575,6 +620,13 @@ padding: 18px 39px 18px 39px;
 .inner-page.main-header {
   margin: 0;
   padding: 0;
+}
+.inner-page.figure {
+display: block;
+margin-block-start: 1em;
+margin-block-end: 1em;
+margin-inline-end: 20px;
+margin-inline-start: 20px;
 }
 
 /* не могу понять почему у меня все "липнет" у краям */
