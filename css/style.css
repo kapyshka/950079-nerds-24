@@ -32,12 +32,14 @@ a {
 .container {
   width: 1140px;
   margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+
 }
 .visually-hidden:not(:focus):not(:active),
 input[type="checkbox"].visually-hidden,
 input[type="radio"].visually-hidden {
   position: absolute;
-
   width: 1px;
   height: 1px;
   margin: -1px;
@@ -49,6 +51,13 @@ input[type="radio"].visually-hidden {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  clip: rect(0, 0, 0, 0);
 }
 .filter-button-button {
   color: #000000;
@@ -172,7 +181,7 @@ input[type="radio"].visually-hidden {
   padding-left: 50px;
 }
 
-/* не понимаю почему изорражение не хочет отлипнуть от слова */
+
 .basket::before {
   content: "";
   position: absolute;
@@ -219,7 +228,6 @@ input[type="radio"].visually-hidden {
   color: rgba(0, 0, 0, 0.302);
   background-color:#eeeeee;
 }
-/* не могу расположить картинки слева */
 .services-list {
   display: flex;
   justify-content: space-between;
@@ -256,6 +264,20 @@ padding: 18px 39px 18px 39px;
   font-weight: normal;
 }
 
+.services-foto {
+  margin: 0;
+  padding: 0;
+}
+
+.services-foto img,
+.catalog-foto img {
+  max-width: 100%;
+  height: auto;
+}
+.catalog-foto {
+  margin: 0;
+  padding: 0;
+}
 .main-footer {
   color: #000000;
   background-color: #ffffff;
@@ -275,6 +297,14 @@ padding: 18px 39px 18px 39px;
   display: none;
   width: 960px;
   height: 590px;
+
+  position: fixed;
+  color: #000000;
+
+  background-color: #ffffff;
+  background-position: 0 0;
+  background-repeat: repeat;
+  box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7);
 }
 
 .contact-us-form {
@@ -327,6 +357,36 @@ padding: 18px 39px 18px 39px;
   background-color: #eeeeee;
   border: none;
 }
+
+
+.contact-us-box {
+  top: 120px;
+  left: 50%;
+  margin-left: -230px;
+  width: 960px;
+  height: 590px;
+}
+
+
+.contact-us-form p {
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.contact-us-form input[type="text"],
+.contact-us-form input[type="password"] {
+  padding: 10px 15px;
+  padding-right: 40px;
+  font: inherit;
+  color: #000000;
+  text-transform: uppercase;
+  background-color: #ffffff;
+  border: 2px solid #eeeeee;
+}
+.contact-us-form input:focus {
+  border-color: #663d15;
+}
+
 .social-button {
   text-align: left;
   width: 60px;
@@ -390,17 +450,15 @@ padding: 18px 39px 18px 39px;
   justify-content: center;
   align-items: center;
   height: 100%;
+}
 
-}
-.catalog {
-  width: 1190px;
-}
 .catalog-container {
   display: flex;
   justify-content: space-between;
 }
 .catalog-block {
   width: 760px;
+  margin: 1em;
 }
 .catalog-filter {
   width: 270px;
@@ -414,7 +472,20 @@ padding: 18px 39px 18px 39px;
 
 .catalog-item::before {
   content: "";
+  position: absolute;
 
+  left: 40px;
+  top: -30px;
+
+  width: 13px;
+  height: 13px;
+
+  background-color: #ffffff;
+   border-radius: 50%;
+}
+
+.catalog-item::after {
+  content: "";
   position: absolute;
   left: 15px;
   top: -30px;
@@ -425,6 +496,7 @@ padding: 18px 39px 18px 39px;
   background-color: #ffffff;
   border-radius: 50%;
 }
+
 .filter fieldset {
   padding: 0;
   margin: 0;
@@ -465,6 +537,11 @@ padding: 18px 39px 18px 39px;
   user-select: none;
 }
 
+.filter-input:hover + label,
+.filter-input:focus + label {
+  color: #663d15;
+}
+
 .filter-input-checkbox + label::before {
   content: "";
   position: absolute;
@@ -475,18 +552,24 @@ padding: 18px 39px 18px 39px;
   height: 16px;
 
   border: 2px solid #a6a6a6;
+  background-image: url("../img/checkbox-on.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
 }
 
 .filter-input-checkbox:checked + label::after {
   content: "";
 
   position: absolute;
-  left: -32px;
-  bottom: 12px;
+  top: -32px;
+  left: -12px;
 
   width: 12px;
   height: 12px;
-;
+
+  background-image: url("../img/checkbox-on.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
 }
 
 .filter-input-radio + label::before {
@@ -517,6 +600,12 @@ padding: 18px 39px 18px 39px;
   border-radius: 50%;
 }
 
+.filter-input:disabled + label {
+  color: #000000;
+
+  opacity: 0.5;
+}
+
 .catalog-list {
   display: flex;
   flex-wrap: wrap;
@@ -527,7 +616,6 @@ padding: 18px 39px 18px 39px;
   margin-bottom: 60px;
 }
 
-/* почему не смещается выплывающая область?? */
 .info-card {
   background-color: #ffffff;
   height: 615px;
@@ -542,7 +630,7 @@ padding: 18px 39px 18px 39px;
 }
 
 .catalog-item-info {
-  position: absolute;
+  display: none;
   bottom: 0;
   left: 0;
   width: 100%;
@@ -553,8 +641,9 @@ padding: 18px 39px 18px 39px;
 
 }
 
-.catalog-item-info:hover {
+.catalog-item:hover .catalog-item-info {
   display: block;
+  position: absolute;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   background-color: #eeeeee;
 }
@@ -616,7 +705,7 @@ padding: 18px 39px 18px 39px;
   background-color: #ffffff;
   border: 4px inset #eeeeee;
 }
-/* как объединить две части?? */
+
 .inner-page.main-header {
   margin: 0;
   padding: 0;
@@ -629,5 +718,247 @@ margin-inline-end: 20px;
 margin-inline-start: 20px;
 }
 
-/* не могу понять почему у меня все "липнет" у краям */
-/* не получается вставить галочку в фильтре */
+.slider {
+  position: relative;
+
+  background-color: #eeeeee;
+
+}
+
+.slider-controls {
+  position: absolute;
+  left: 50%;
+  bottom: 104px;
+  z-index: 100;
+
+  width: 160px;
+  height: 18px;
+
+  text-align: center;
+  font-size: 0;
+  transform: translateX(-50%);
+}
+
+.slider-controls label {
+  position: relative;
+
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  padding: 8px;
+
+  border-radius: 50%;
+  cursor: pointer;
+}
+.slider-controls label::after {
+  content: "";
+
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  z-index: 1;
+
+  width: 18px;
+  height: 18px;
+
+  background: #ffffff;
+
+  border-radius: 50%;
+}
+.slider-list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.slider-item {
+  display: none;
+  padding: 78px 0 80px 0;
+}
+
+.slider-item:nth-child(1) {
+  background-image: url("../img/slide1.png");
+  background-repeat: no-repeat;
+  background-position: 93% 18px;
+}
+
+.slider-item:nth-child(2) {
+  background-image: url("../img/slide2.png");
+  background-repeat: no-repeat;
+  background-position: 100% 0;
+}
+
+.slider-item:nth-child(3) {
+  background-image: url("../img/slide3.png");
+  background-repeat: no-repeat;
+  background-position: 100% 20px;
+}
+
+#product-1:checked ~ .slider-list .slider-item:nth-child(1) {
+  display: block;
+}
+
+ #product-2:checked ~ .slider-list .slider-item:nth-child(2) {
+  display: block;
+}
+
+#product-3:checked ~ .slider-list .slider-item:nth-child(3) {
+  display: block;
+}
+
+#product-1:checked ~ .slider-controls .slider-controls-item--1::before,
+#product-2:checked ~ .slider-controls .slider-controls-item--2::before,
+#product-3:checked ~ .slider-controls .slider-controls-item--3::before {
+
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 2;
+  width: 4px;
+  height: 4px;
+  margin: -4px;
+  background-color: inherit;
+  border: 2px solid #c1c1c1;
+  border-radius: 50%;
+}
+
+.slider-item h3 {
+  max-width: 600px;
+  margin: 0;
+  margin-bottom: 27px;
+
+  font-size: 55px;
+  line-height: 55px;
+  font-weight: 500;
+}
+
+.slider-item p {
+  max-width: 430px;
+  margin: 0;
+  margin-bottom: 38px;
+}
+.button-slider {
+  display: block;
+  width: 240px;
+  padding: 13px 0;
+
+  font-size: 16px;
+  line-height: 18px;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+
+  background-color: #fb565a;
+  border-radius: 3px;
+  border: none;
+}
+
+.button-slider:hover,
+.button-slider:focus {
+  background-color: #e74246;
+}
+
+.button-slider:active {
+  background-color: #d7373b;
+  color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 3px rgba(0, 0, 0, 0.1) inset;
+}
+
+.filter-item {
+  margin: 0;
+  padding: 0;
+
+  border: none;
+}
+
+.range-filter {
+  width: 260px;
+  margin-top: 49px;
+}
+
+.filter-item legend {
+  font-size: 18px;
+  line-height: 24px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.range-controls {
+  position: relative;
+
+  height: 41px;
+  margin-bottom: 15px;
+  padding-top: 39px;
+  padding-right: 20px;
+  padding-left: 20px;
+
+  background-color: #f1f1f1;
+
+  border-radius: 5px;
+}
+
+.range-controls .scale {
+  height: 2px;
+
+  background: #d7dcde;
+}
+
+
+.range-controls .toggle {
+  position: absolute;
+  top: 31px;
+  left: 0;
+
+  width: 4px;
+  height: 4px;
+  padding: 0;
+
+  border: 8px solid #ffffff;
+  background-color: #ababab;
+  box-shadow: 0 2px 1px 0 #cfcfcf;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.range-controls .toggle-min {
+  left: 50px;
+}
+
+.range-controls .toggle-max {
+  left: 110px;
+}
+
+.price-controls {
+  font-size: 0;
+}
+
+.price-controls label {
+  display: inline-block;
+  width: 50%;
+
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.price-controls input {
+  width: 60px;
+  padding: 8px 10px;
+  margin-left: 10px;
+
+  font-family: Roboto, Arial, sans-serif;
+  font-size: 16px;
+  text-align: center;
+  color: #283136;
+
+  border: none;
+  border-radius: 5px;
+  background: #f1f1f1;
+}
+
+.max-price {
+  text-align: right;
+} */
+
