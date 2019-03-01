@@ -469,6 +469,16 @@ padding: 18px 39px 18px 39px;
   border-top: 40px solid #f1f1f1;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
+.info-card {
+  background-color: #ffffff;
+  height: 615px;
+  width: 360px;
+  margin-bottom: 33px;
+  margin-right: 40px;
+  border-radius: 50%;
+
+
+}
 
 .catalog-item::before {
   content: "";
@@ -616,14 +626,7 @@ padding: 18px 39px 18px 39px;
   margin-bottom: 60px;
 }
 
-.info-card {
-  background-color: #ffffff;
-  height: 615px;
-  width: 360px;
-  margin-bottom: 33px;
-  margin-right: 40px;
-  border-radius: 50%;
-}
+
 
 .info-card:nth-child(2n) {
   margin-right: 0;
