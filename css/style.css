@@ -465,19 +465,17 @@ padding: 18px 39px 18px 39px;
 }
 
 .catalog-item {
-  position: relative;
-  border-top: 40px solid #f1f1f1;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
-.info-card {
   background-color: #ffffff;
   height: 615px;
   width: 360px;
   margin-bottom: 33px;
   margin-right: 40px;
   border-radius: 50%;
-
-
+}
+.info-card {
+  position: relative;
+  border-top: 40px solid #f1f1f1;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .catalog-item::before {
@@ -628,7 +626,7 @@ padding: 18px 39px 18px 39px;
 
 
 
-.info-card:nth-child(2n) {
+.catalog-item:nth-child(2n) {
   margin-right: 0;
 }
 
